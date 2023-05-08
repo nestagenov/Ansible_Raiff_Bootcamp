@@ -1,7 +1,7 @@
 ## Тестовое задание: Автоматизированное обновление операционной системы c помощью Ansible
 
 
-
+```bash
 .
 └── Ansible_Raiff_Bootcamp  #main directory
     ├── inventories         #inventory file for production servers
@@ -16,3 +16,4 @@
         └── update_os
             └── tasks       #  <-- task file with server updates depending on the system and next rebooting
                 └── main.yml
+```
