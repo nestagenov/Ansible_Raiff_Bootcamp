@@ -1,6 +1,7 @@
 ## Тестовое задание: Автоматизированное обновление операционной системы c помощью Ansible
 
 
+
 .
 └── Ansible_Raiff_Bootcamp  #main directory
     ├── inventories         #inventory file for production servers
