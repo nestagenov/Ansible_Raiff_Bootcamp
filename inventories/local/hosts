@@ -1,0 +1,14 @@
+#host
+
+
+[servers]
+10.10.10.215
+localhost ansible_connection=local
+
+[servers_local]
+10.10.10.215
+
+[servers_local:vars]
+ansible_user=root
+ansible_ssh_private_key_file=/home/ansible/.ssh/id_rsa
+

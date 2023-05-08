@@ -1,0 +1,25 @@
+---
+- name: Updating OS
+  become: yes
+  tasks:
+    - name: Updating packages in RedHat
+      shell: dnf upgrade -y
+      when: ansible_facts['os_family']|lower == 'redhat'
+    - name: Updating packages in Debian
+      when: ansible_facts['os_family']|lower == 'debian'
+      apt:
+        update_cache: yes
+        cache_valid_time: 86400
+    - name: Updating packages in CentOS
+      when: ansible_facts['os_family']|lower == 'centos'
+      yum:
+        name: "*"
+        state: latest
+    - name: Reebot servers via Ansible
+      ansible.builtin.reboot:
+        msg: Reebot via Ansible
+        pre_reboot_delay: 5
+        post_reboot_delay: 15
+        test_command1: "whoami"
+        test_command2: "pwd"
+
