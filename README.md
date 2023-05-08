@@ -17,3 +17,8 @@
             └── tasks       #  <-- task file with server updates depending on the system and next rebooting
                 └── main.yml
 ```
+
+
+## Контактные данные:
+
+E-Mail: kirillkozlov.kka@gmail.com
